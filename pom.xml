@@ -14,27 +14,44 @@
 		<developerConnection>scm:git|https://github.com/bsideup/TrylogicUtils-1.git</developerConnection>
 	</scm>
 
-	<parent>
-		<groupId>ru.trylogic</groupId>
-		<artifactId>trylogic-framework-parent</artifactId>
-		<version>1.0-SNAPSHOT</version>
-		<relativePath>../../pom.xml</relativePath>
-	</parent>
+	<properties>
+		<flexmojos.version>4.2-beta</flexmojos.version>
+		<flex.framework.version>4.6.b.23201</flex.framework.version>
+	</properties>
 
 	<build>
 		<sourceDirectory>src/main/flex</sourceDirectory>
 		<testSourceDirectory>src/test/flex</testSourceDirectory>
 
+
 		<plugins>
 			<plugin>
 				<groupId>org.sonatype.flexmojos</groupId>
 				<artifactId>flexmojos-maven-plugin</artifactId>
+				<version>${flexmojos.version}</version>
+				<extensions>true</extensions>
 				<configuration>
-					<storepass />
+					<storepass/>
+					<skipTest>true</skipTest>
+					<skipTests>true</skipTests>
 					<loadConfigs>
 						<config>src/main/resources/compiler-config.xml</config>
 					</loadConfigs>
 				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>com.adobe.flex</groupId>
+						<artifactId>compiler</artifactId>
+						<version>${flex.framework.version}</version>
+						<type>pom</type>
+						<exclusions>
+							<exclusion>
+								<groupId>com.adobe.flex.framework</groupId>
+								<artifactId>playerglobal</artifactId>
+							</exclusion>
+						</exclusions>
+					</dependency>
+				</dependencies>
 			</plugin>
 			
 			
