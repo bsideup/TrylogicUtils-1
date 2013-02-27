@@ -8,6 +8,12 @@
 	<artifactId>trylogic-utils</artifactId>
 	<packaging>swc</packaging>
 	<version>1.0.0-SNAPSHOT</version>
+	
+	<scm>
+		<connection>scm:git:git@github.com:bsideup/TrylogicUtils-1.git</connection>
+		<url>scm:git:git@github.com:bsideup/TrylogicUtils-1.git</url>
+		<developerConnection>scm:git:git@github.com:bsideup/TrylogicUtils-1.git</developerConnection>
+	</scm>
 
 	<parent>
 		<groupId>ru.trylogic</groupId>
@@ -31,8 +37,26 @@
 					</loadConfigs>
 				</configuration>
 			</plugin>
+			
+			
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.0-beta-9</version>
+			</plugin>
 		</plugins>
 
 	</build>
+	
+	<distributionManagement>
+		<repository>
+			<id>release-repository</id>
+			<url>http://localhost:8080/nexus/content/repositories/releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshot-repository</id>
+			<url>http://localhost:8080/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 </project>
