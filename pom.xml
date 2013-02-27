@@ -10,9 +10,7 @@
 	<version>1.0.0-SNAPSHOT</version>
 	
 	<scm>
-		<connection>scm:git:git@github.com:bsideup/TrylogicUtils-1.git</connection>
-		<url>scm:git:git@github.com:bsideup/TrylogicUtils-1.git</url>
-		<developerConnection>scm:git:git@github.com:bsideup/TrylogicUtils-1.git</developerConnection>
+		<connection>scm:git|ssh://git@github.com:bsideup/TrylogicUtils-1.git</connection>
 	</scm>
 
 	<parent>
