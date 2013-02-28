@@ -8,8 +8,8 @@
 	<version>1.0.5-SNAPSHOT</version>
 	
 	<scm>
-		<connection>scm:git|https://github.com/bsideup/TrylogicUtils-1.git</connection>
-		<developerConnection>scm:git|https://github.com/bsideup/TrylogicUtils-1.git</developerConnection>
+		<connection>scm:git|git@github.com:bsideup/TrylogicUtils-1.git</connection>
+		<developerConnection>scm:git|git@github.com:bsideup/TrylogicUtils-1.git</developerConnection>
 	  <tag>HEAD</tag>
   </scm>
 
