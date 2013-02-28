@@ -5,12 +5,13 @@
 	<groupId>ru.trylogic</groupId>
 	<artifactId>trylogic-utils</artifactId>
 	<packaging>swc</packaging>
-	<version>1.0.4-SNAPSHOT</version>
+	<version>1.0.4</version>
 	
 	<scm>
 		<connection>scm:git|https://github.com/bsideup/TrylogicUtils-1.git</connection>
 		<developerConnection>scm:git|https://github.com/bsideup/TrylogicUtils-1.git</developerConnection>
-	</scm>
+	  <tag>trylogic-utils-1.0.4</tag>
+  </scm>
 
 	<properties>
 		<flexmojos.version>4.2-beta</flexmojos.version>
