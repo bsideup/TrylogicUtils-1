@@ -131,6 +131,7 @@
 		<repository>
 			<id>release-repository</id>
 			<url>http://nexus.trylogic.ru/content/repositories/production/</url>
+			<layout>legacy</layout>
 		</repository>
 		<snapshotRepository>
 			<id>snapshot-repository</id>
