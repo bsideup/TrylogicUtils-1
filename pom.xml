@@ -129,11 +129,11 @@
 	<distributionManagement>
 		<repository>
 			<id>release-repository</id>
-			<url>http://localhost:8080/nexus/content/repositories/releases/</url>
+			<url>http://nexus.trylogic.ru/content/repositories/releases/</url>
 		</repository>
 		<snapshotRepository>
 			<id>snapshot-repository</id>
-			<url>http://localhost:8080/nexus/content/repositories/snapshots/</url>
+			<url>http://nexus.trylogic.ru/content/repositories/snapshots/</url>
 		</snapshotRepository>
 	</distributionManagement>
 
