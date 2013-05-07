@@ -81,7 +81,7 @@
 				<version>2.4</version>
 				<configuration>
 					<tagNameFormat>release/@{project.version}</tagNameFormat>
-					<pushChanges>true</pushChanges>
+					<pushChanges>false</pushChanges>
 					<localCheckout>true</localCheckout>
 				</configuration>
 			</plugin>
