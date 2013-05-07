@@ -5,12 +5,12 @@
 	<groupId>ru.trylogic</groupId>
 	<artifactId>trylogic-utils</artifactId>
 	<packaging>swc</packaging>
-	<version>1.1-SNAPSHOT</version>
+	<version>1.1-RC-SNAPSHOT</version>
 	
 	<scm>
 		<connection>scm:git|git@github.com:bsideup/TrylogicUtils-1.git</connection>
 		<developerConnection>scm:git|git@github.com:bsideup/TrylogicUtils-1.git</developerConnection>
-	  <tag>HEAD</tag>
+	  <tag>staging</tag>
   </scm>
 
 	<properties>
