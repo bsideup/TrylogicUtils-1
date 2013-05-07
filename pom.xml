@@ -5,7 +5,7 @@
 	<groupId>ru.trylogic</groupId>
 	<artifactId>trylogic-utils</artifactId>
 	<packaging>swc</packaging>
-	<version>1.2-RC-SNAPSHOT</version>
+	<version>1.2.1-SNAPSHOT</version>
 	
 	<scm>
 		<connection>scm:git|git@github.com:bsideup/TrylogicUtils-1.git</connection>
