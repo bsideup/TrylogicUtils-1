@@ -32,21 +32,21 @@ create_release_branch() {
     echo -n "Creating release branch... "
     RELEASE_BRANCH=$(get_release_branch $1)
     echo "$RELEASE_BRANCH"
-    git checkout -b ${RELEASE_BRANCH} develop
+    create_branch=$(git checkout -b ${RELEASE_BRANCH} develop 2>&1)
 }
 
 remove_release_branch() {
     echo -n "Removing release branch... "
     RELEASE_BRANCH=$(get_release_branch $1)
     echo "$RELEASE_BRANCH"
-    git branch -D ${RELEASE_BRANCH}
+    remove_branch=$(git branch -D ${RELEASE_BRANCH} 2>&1)
 }
 
 mvn_release() {
     echo -n "Using maven-release-plugin... "
-    mvn $MVN_ARGS -B release:prepare
+    mvn_release_prepare=$(mvn $MVN_ARGS -B release:prepare)
     echo -n "'mvn -B release:prepare' "
-    mvn $MVN_ARGS release:perform
+    mvn_release_perform=$(mvn $MVN_ARGS release:perform)
     echo "'mvn release:perform'"
 }
 
@@ -54,8 +54,8 @@ mvn_release() {
 merging_to_develop() {
     echo -n "Merging back to develop... "
     RELEASE_BRANCH=$(get_release_branch $1)
-    git checkout develop
-    git merge --no-ff ${RELEASE_BRANCH}
+    git_co_develop=$(git checkout develop 2>&1)
+    git_merge=$(git merge --no-ff ${RELEASE_BRANCH} 2>&1)
     echo "done"
 }
 
@@ -65,12 +65,12 @@ merging_to_develop() {
 merging_to_master() {
     echo -n "Merging back to master... "
     RELEASE_BRANCH=$(get_release_branch $1)
-    git checkout ${RELEASE_BRANCH}
-    git reset --hard HEAD~1
-    git merge -s ours master
-    git checkout master
+    git_co_release_branch=$(git checkout ${RELEASE_BRANCH})
+    git_resete_release_branch=$(git reset --hard HEAD~1)
+    git_merge_ours=$(git merge -s ours master 2>&1)
+    git_co_master=$(git checkout master 2>&1)
     # We make the assumption "theirs" is the best
-    git merge --no-ff ${RELEASE_BRANCH}
+    git_merge=$(git merge --no-ff ${RELEASE_BRANCH} 2>&1)
     echo "done"
 }
 
@@ -102,3 +102,4 @@ else
     echo "$SELF: you are not in a git directory"
     exit 2
 fi
+
