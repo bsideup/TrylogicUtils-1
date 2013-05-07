@@ -103,6 +103,13 @@
 			<type>swc</type>
 			<scope>external</scope>
 		</dependency>
+		
+		<dependency>
+			<groupId>com.gamua</groupId>
+			<artifactId>starling-framework</artifactId>
+			<version>1.3-SNAPSHOT</version>
+			<type>swc</type>
+		</dependency>
 	</dependencies>
 
 	<repositories>
