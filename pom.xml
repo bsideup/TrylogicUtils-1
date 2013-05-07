@@ -80,7 +80,7 @@
 				<artifactId>maven-release-plugin</artifactId>
 				<version>2.4</version>
 				<configuration>
-					<tagNameFormat>v@{project.version}</tagNameFormat>
+					<tagNameFormat>release/@{project.version}</tagNameFormat>
 					<pushChanges>false</pushChanges>
 					<localCheckout>true</localCheckout>
 				</configuration>
