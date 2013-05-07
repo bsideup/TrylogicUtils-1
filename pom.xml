@@ -10,7 +10,7 @@
 	<scm>
 		<connection>scm:git|git@github.com:bsideup/TrylogicUtils-1.git</connection>
 		<developerConnection>scm:git|git@github.com:bsideup/TrylogicUtils-1.git</developerConnection>
-		<tag>HEAD</tag>
+		<tag>releases/1.4</tag>
 	</scm>
 
 	<properties>
