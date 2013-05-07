@@ -6,12 +6,12 @@
 	<artifactId>trylogic-utils</artifactId>
 	<packaging>swc</packaging>
 	<version>1.2.6-SNAPSHOT</version>
-	
+
 	<scm>
 		<connection>scm:git|git@github.com:bsideup/TrylogicUtils-1.git</connection>
 		<developerConnection>scm:git|git@github.com:bsideup/TrylogicUtils-1.git</developerConnection>
 		<tag>HEAD</tag>
-  </scm>
+	</scm>
 
 	<properties>
 		<flexmojos.version>4.2-beta</flexmojos.version>
@@ -76,11 +76,13 @@
 
 
 			<plugin>
-				<groupId>com.atlassian.maven.plugins</groupId>
-				<artifactId>maven-jgitflow-plugin</artifactId>
-				<version>1.0-alpha7</version>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.3.2</version>
 				<configuration>
-					<!-- see goals wiki page for configuration options -->
+					<tagNameFormat>v@{project.version}</tagNameFormat>
+					<pushChanges>false</pushChanges>
+					<localCheckout>true</localCheckout>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -129,7 +131,7 @@
 			<url>http://repository.sonatype.org/content/groups/flexgroup/</url>
 		</pluginRepository>
 	</pluginRepositories>
-	
+
 	<distributionManagement>
 		<repository>
 			<id>release-repository</id>
