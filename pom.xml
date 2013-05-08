@@ -90,8 +90,8 @@
 				<version>2.3.2</version>
 				<configuration>
 					<tagNameFormat>v@{project.version}</tagNameFormat>
-					<pushChanges>false</pushChanges>
-					<localCheckout>true</localCheckout>
+					<!--pushChanges>false</pushChanges>
+					<localCheckout>true</localCheckout-->
 				</configuration>
 			</plugin>
 		</plugins>
